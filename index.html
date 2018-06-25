@@ -14,9 +14,9 @@
 	<title>SIM Front End Lesson</title>
 </head>
 
-<body data-spy="scroll" data-target="#nav-list" data-offset="0">
+<body data-spy="scroll" data-target="#nav-list" data-offset="80">
 	<header id="header">
-		<nav class="navbar navbar-expand-lg navbar-dark">
+		<nav id="nav-list" class="navbar navbar-expand-lg navbar-dark">
 			<a class="navbar-brand" href="#">
 				<img src="images/logo.svg" alt="nowhere" class="logo-image img-fluid">
 			</a>
@@ -25,17 +25,16 @@
 			</button>
 
 			<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-				<ul id="nav-list scroll" class="navbar-nav scroll">
+				<ul class="navbar-nav">
 					<li class="nav-item"> <a class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a> </li>
-					<li class="nav-item"> <a class="nav-link scroll" href="#about">About</a> </li>
-					<li class="nav-item"> <a class="nav-link scroll" href="#service">Services</a> </li>
-					<li class="nav-item"> <a class="nav-link scroll" href="#portfolio">Portfolio</a> </li>
-					<li class="nav-item"> <a class="nav-link scroll" href="#contact">Contact</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="#about">About</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="#service">Services</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="#portfolio">Portfolio</a> </li>
+					<li class="nav-item"> <a class="nav-link" href="#contact">Contact</a> </li>
 				</ul>
 			</div>
 		</nav>
 	</header>
-
 
 	<section id="home" class="hero">
 		<!-- particles.js container -->
@@ -55,7 +54,7 @@
 		<h2>About me</h2>
 		<div class="row summary">
 			<div class="col-md-6">
-				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="cazrousel">
 					<ol class="carousel-indicators">
 						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -106,25 +105,49 @@
 
 		<div class="row service-items">
 			<div class="service-item col-md-4 px-md-4">
-				<i class="fab fa-html5"></i>
-				<h3>Web Design and Development</h3>
-				<p>
-					The classic “Lorem ipsum dolor sit amet…” passage is attributed to a remixing of the Roman philosopher Cicero's 45 BC text De Finibus Bonorum et Malorum (“On the Extremes of Good and Evil”).
-				</p>
+				<div class="service-item--front">
+					<i class="fab fa-html5"></i>
+					<h3>Web Design and Development</h3>
+					<p>
+						The classic “Lorem ipsum dolor sit amet…” passage is attributed to a remixing of the Roman philosopher Cicero's 45 BC text De Finibus Bonorum et Malorum (“On the Extremes of Good and Evil”).
+					</p>
+				</div>
+				<div class="service-item--back">
+					<h3>Back panel</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quia magni, sapiente porro ipsum, cupiditate corporis adipisci provident modi, obcaecati illo dolores. Veritatis nulla natus aperiam, incidunt exercitationem architecto dolores!
+					</p>
+				</div>
 			</div>
 			<div class="service-item col-md-4 px-md-4">
-				<i class="fab fa-css3"></i>
-				<h3>Creative Concept</h3>
-				<p>
-					According to Latin professor Richard McClintock — the man credited with discovering Lorem Ipsum's roots — it is likely that sometime during the middle ages a typesetter scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book. But that was just the beginning.
-				</p>
+				<div class="service-item--front">
+					<i class="fab fa-css3"></i>
+					<h3>Creative Concept</h3>
+					<p>
+						According to Latin professor Richard McClintock — the man credited with discovering Lorem Ipsum's roots — it is likely that sometime during the middle ages a typesetter scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book. But that was just the beginning.
+					</p>
+				</div>
+				<div class="service-item--back">
+					<h3>Back panel</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quia magni, sapiente porro ipsum, cupiditate corporis adipisci provident modi, obcaecati illo dolores. Veritatis nulla natus aperiam, incidunt exercitationem architecto dolores!
+					</p>
+				</div>
 			</div>
 			<div class="service-item col-md-4 px-md-4">
-				<i class="fab fa-angellist"></i>
-				<h3>Strategy</h3>
-				<p>
-					Five centuries later Lorem Ipsum experienced a surge in popularity with the release of Letraset's dry-transfer sheets. These sheets of lettering could be rubbed on anywhere and were quickly adopted by graphic artists, printers, architects, and advertisers for their professional look and ease of use. 
-				</p>
+				<div class="service-item--front">
+					<i class="fab fa-angellist"></i>
+					<h3>Strategy</h3>
+					<p>
+						Five centuries later Lorem Ipsum experienced a surge in popularity with the release of Letraset's dry-transfer sheets. These sheets of lettering could be rubbed on anywhere and were quickly adopted by graphic artists, printers, architects, and advertisers for their professional look and ease of use. 
+					</p>
+				</div>
+				<div class="service-item--back">
+					<h3>Back panel</h3>
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, quia magni, sapiente porro ipsum, cupiditate corporis adipisci provident modi, obcaecati illo dolores. Veritatis nulla natus aperiam, incidunt exercitationem architecto dolores!
+					</p>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -247,12 +270,12 @@
 				<label for="colours">select colour</label>
 				<!-- <textarea name="colours" id=" "cols="30" rows="1" class="form-control"></textarea> -->
 				<select class="form-control" id="exampleFormControlSelect1">
-      			<option>1</option>
-      			<option>2</option>
-      			<option>3</option>
-      			<option>4</option>
-      			<option>5</option>
-    </select>
+	      			<option>1</option>
+	      			<option>2</option>
+	      			<option>3</option>
+	      			<option>4</option>
+	      			<option>5</option>
+    			</select>
 
 			</div>
 			<div class="form-group col-12">
@@ -264,7 +287,6 @@
 			</div>
 		</form>
 	</section>
-
 	<footer class="footer container-fluid py-4">
 		<p>&copy; AlphaCamp 2018. All rights reserved.</p>
 		<div class="social-group">
@@ -285,7 +307,7 @@
 				</div>
 				<div class="modal-body">
 					<p>Mind the proportions of the images showed in the modal dialog</p>
-					<img src="images/portfolio/portfolio1.jpg" alt="" class="img-fluid mx-auto">
+					<img src="" alt="" class="img-fluid mx-auto">
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -300,6 +322,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
 	<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>

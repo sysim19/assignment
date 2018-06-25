@@ -29,11 +29,11 @@ p {
 	margin: 1em 0;
 }
 
-a:hover,
+/*a:hover,
 .nav-link:hover,
 .nav-link.active {
-	color: #00a1ff;
-}
+	color: #e5ff00;
+}*/
 
 .clearfix:after {
 	display: block;
@@ -209,6 +209,32 @@ section h6 {
 /* Services section */
 .my-services {
 	background-color: #e8eaed;
+}
+
+.service-item {
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.service-item.is-flipped {
+	transform: rotateY(180deg);
+}
+
+.service-item--front {
+	backface-visibility: hidden;
+	height: 100%;
+	background-color: #efefef; 
+}
+
+.service-item--back {
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: #efefef;
+	transform: rotateY(180deg);
 }
 
 .service-item i {

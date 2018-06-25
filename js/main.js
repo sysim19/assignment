@@ -5,6 +5,10 @@ $( document ).ready(function() {
 	$('.navbar-toggle').click(function() {
 		$('.nav-list').toggleClass('is-active');
 	});
+
+  $('.service-item').click(function() {
+    $(this).toggleClass("is-flipped");
+  });
 		
   $.ajax({
     url: 'https://reqres.in/api/unknown',
@@ -50,6 +54,20 @@ $( document ).ready(function() {
     let imageElement = $(e.currentTarget).find('img');
     let imageSource = imageElement.attr('src');
     $('.modal-body img').attr('src', imageSource);
+
+    if($(this).index() == 0) {
+      // change title
+      $('#exampleModalLongTitle').text('title 1');
+
+      //change body copy
+      $('.modal-body p').text("HELLO SIM");
+    } else if($(this).index() == 1) {
+      $('#exampleModalLongTitle').text('title 2');
+    } else if($(this).index() == 2) {
+      $('#exampleModalLongTitle').text('title 3');
+    } else if($(this).index() == 3) {
+      $('#exampleModalLongTitle').text('title 3');
+    }
   });
 
   // Ajax call
